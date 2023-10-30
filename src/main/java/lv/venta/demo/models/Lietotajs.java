@@ -1,6 +1,7 @@
 package lv.venta.demo.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,9 +39,9 @@ public class Lietotajs {
 	@Column(name = "PC")
 	private int pc;
 	
-	@ManyToMany(mappedBy = "lietotajs")
+	@ManyToMany(mappedBy = "lietotaji")
 	@ToString.Exclude
-	private ArrayList<Gramata> gramatas;
+	private Collection<Gramata> gramatas = new ArrayList<Gramata>();
 	
 	public Lietotajs(String name, String surname, int pc) {
 		this.name = name;

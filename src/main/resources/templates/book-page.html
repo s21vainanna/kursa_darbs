@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<h1>Books</h1>
+	
+
+	<table style="width:50%">
+		
+		<tr th:each="book : ${object}">
+			<p th:text="${book.getIDg()}"></p>
+			<p th:text="${book.getNosaukums()}"></p>
+			<p th:text="${book.getAutori()}"></p>
+			<p th:text="${book.getNodala()}"></p>
+			<p th:text="${book.getIzdevejs()}"></p>
+			<p th:text="${book.getLietotaji()}"></p>
+		</tr>
+	</table>
+</body>
+
+</html>
